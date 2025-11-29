@@ -15,7 +15,7 @@ from .export_utils import generate_csv, generate_pdf
 
 models.Base.metadata.create_all(bind=database.engine)
 
-app = FastAPI(title="Task Tracker API")
+app = FastAPI(title="Task Tracker API", root_path="/api")
 
 # CORS
 app.add_middleware(
